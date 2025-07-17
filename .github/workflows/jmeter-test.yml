@@ -37,12 +37,14 @@ jobs:
     - name: 🧪 Execute JMeter performance test
       run: |
         docker run --rm \
-          -v ${{ github.workspace }}/jmeter:/tests \
-          -w /tests \
-          justb4/jmeter \
-          -n -t test-plan-demo.jmx \
-          -l resultados.jtl \
-          -e -o report
+        --network dummy-app_jmeter-net \
+        -v ${{ github.workspace }}/jmeter:/tests \
+        -w /tests \
+        justb4/jmeter \
+        -n -t test-plan.jmx \
+        -Jtarget_host=dummy-app \
+        -l results.jtl \
+        -e -o report
 
     # 📤 5. Upload the HTML performance report as an artifact
     - name: 📤 Upload HTML report
