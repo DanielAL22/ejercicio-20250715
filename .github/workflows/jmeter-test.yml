@@ -18,7 +18,7 @@ jobs:
 
     # 🐳 2. Build and start the dummy API using Docker Compose
     - name: 🛠️ Build & Launch Dummy API with Docker Compose
-      working-directory: app-dummy
+      working-directory: dummy-app
       run: docker compose up -d --build
 
     # ⏳ 3. Wait for the API to become available (responding with "pong")
