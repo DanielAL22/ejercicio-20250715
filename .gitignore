@@ -1,0 +1,11 @@
+# Ignorar archivos temporales de JMeter
+jmeter/resultados.jtl
+jmeter/report/
+jmeter/*.log
+jmeter/*.bak
+jmeter/*.tmp
+jmeter/.DS_Store
+
+# Si usas otras extensiones de salida
+jmeter/*.csv
+jmeter/*.xml
