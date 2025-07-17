@@ -37,10 +37,12 @@ jobs:
     - name: 🧪 Execute JMeter performance test
       run: |
         docker run --rm \
+          --network jmeter-net \
           -v ${{ github.workspace }}/jmeter:/tests \
           -w /tests \
           justb4/jmeter \
           -n -t test-plan-demo.jmx \
+          -Jtarget_host=app-dummy \
           -l resultados.jtl \
           -e -o report
 

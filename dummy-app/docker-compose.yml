@@ -10,3 +10,4 @@ services:
 
 networks:
   jmeter-net:
+    driver: bridge
