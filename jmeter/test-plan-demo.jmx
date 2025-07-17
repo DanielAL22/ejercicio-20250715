@@ -19,7 +19,7 @@
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request GET">
-          <stringProp name="HTTPSampler.domain">${target-host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${target_host}</stringProp>
           <stringProp name="HTTPSampler.port">3000</stringProp>
           <stringProp name="HTTPSampler.path">api/ping</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -69,7 +69,7 @@
         </ResultCollector>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request POST">
-          <stringProp name="HTTPSampler.domain">${target-host}</stringProp>
+          <stringProp name="HTTPSampler.domain">${target_host}</stringProp>
           <stringProp name="HTTPSampler.port">3000</stringProp>
           <stringProp name="HTTPSampler.path">api/echo</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
